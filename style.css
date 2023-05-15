@@ -1,0 +1,241 @@
+:root {
+	/* font sizes  */
+
+	--heading-XL-size: 56px;
+	--heading-XL-line-height: 70px;
+
+	--heading-L-size: 40px;
+	--heading-L-line-height: 51px;
+
+	--heading-M-size: 32px;
+	--heading-M-line-height: 40px;
+
+	--heading-S-size: 24px;
+	--heading-S-line-height: 28px;
+
+	/* font weights  */
+
+	--fw-extra-bold: 800;
+	--fs-medium-bold: 500;
+	--fs-bold: 700;
+
+	/* body */
+	--body-M-size: 18px;
+	--body-M-line-height: 28px;
+
+	--body-S-size: 16px;
+	--body-S-line-height: 28px;
+
+	/* text colors */
+	--text-normal-color: #83869a;
+	--text-darker-color: #13183f;
+	--text-pink-color: #f74780;
+	--text-white-color: #ffffff;
+	--text-pink-dim-color: #ffa7c3;
+
+	/* backgrounds colors  */
+
+	--bg-white: #f2f2f2;
+	--bg-darker: #13183f;
+	--bg-pure-white: #ffffff;
+	--bg-gradient-main: linear-gradient(#ff6f48, #f02aa6);
+	--bg-gradient-support: linear-gradient(#4851ff, #f02aa6);
+	--bg-body-gradient: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Plus Jakarta Sans", sans-serif;
+	font-style: normal;
+
+	color: #13183f;
+	/* min-height: 100vh; */
+	background-image: var(--bg-white);
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.courses-area {
+	width: 100%;
+	background-image: var(--bg-body-gradient);
+	padding: 0 165px 140px 165px;
+}
+
+.courses-area > .courses {
+	/* max-width: 1110px; */
+	width: 100%;
+	margin: auto;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 56px 30px;
+}
+
+.courses > .course-card {
+	padding-top: 24px;
+}
+
+.course-card .card {
+	width: 100%;
+	min-height: 100%;
+	background-color: var(--bg-pure-white);
+	border-radius: 10px;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.23);
+	padding: 64px 32px 40px 32px;
+	position: relative;
+}
+
+.course-card .card > .course-image {
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	left: 32px;
+	top: -24px;
+}
+
+.card > .card-body > .card-title {
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 30px;
+	margin-bottom: 24px;
+}
+
+.card > .card-body > .card-paragraph {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 28px;
+	color: var(--text-normal-color);
+	margin-bottom: 24px;
+}
+
+.card > .card-body > .card-link {
+	/* position: absolute;
+    bottom: 40px; */
+	color: var(--text-pink-color);
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 28px;
+	cursor: pointer;
+}
+
+
+
+.card > .card-body > .card-link:hover,
+.card > .card-body > .card-link:active {
+	color: var(--text-pink-dim-color);
+}
+
+#checkout-card {
+	width: 100%;
+	height: 100%;
+	color: var(--text-white-color);
+	background-image: var(--bg-gradient-main);
+	padding: 64px 32px;
+	border-radius: 10px;
+}
+
+#checkout-card > h2 {
+	font-size: 32px;
+	font-weight: 800;
+	line-height: var(--heading-M-line-height);
+}
+
+
+.footer-area {
+	width: 100%;
+	background-color: var(--bg-darker);
+	padding: 32px 165px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#footer-logo{
+    width: 111px;
+    height: 27px;
+}
+
+.btn {
+	width: 167px;
+	height: 56px;
+	border-radius: 56px;
+	line-height: 56px;
+	color: var(--text-white-color);
+	text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#get-started-btn-footer {
+	background-image: var(--bg-gradient-support);
+}
+
+@media (max-width: 1200px) {
+	.courses-area {
+		padding: 0 40px 86px 40px;
+	}
+
+	.footer-area {
+		padding: 36px 40px;
+	}
+
+	.courses-area > .courses {
+		gap: 32px 11px;
+	}
+}
+
+@media (max-width: 768px) {
+	.courses-area {
+		padding: 0 40px 86px 40px;
+	}
+	.courses-area > .courses {
+		gap: 32px 11px;
+	}
+
+    #footer-logo{
+    width: 90px;
+    height: 35px;
+}
+
+    #get-started-btn-footer {
+	width: 140px;
+	height: 48px;
+	line-height: 48px;
+}
+}
+
+@media (max-width: 480px) {
+	.courses-area {
+		padding: 0 16px 80px 16px;
+	}
+
+	.footer-area {
+		padding: 36px 16px;
+	}
+	.courses-area > .courses {
+		gap: 16px;
+	}
+
+	.course-card .card > .course-image {
+		left: 28px;
+	}
+
+	#checkout-card {
+		padding: 24px 29px 32px 28px;
+	}
+}
