@@ -13,6 +13,16 @@
 	--heading-S-size: 24px;
 	--heading-S-line-height: 28px;
 
+	/* title props */
+	--title-desktop-size: 24px;
+	--title-desktop-line-height: 30px;
+	--title-mobile-size: 20px;
+	--title-mobile-line-height: 25px;
+
+	/* title default props */
+	--fs-title: var(--title-desktop-size);
+	--lh-title: var(--title-desktop-line-height);
+
 	/* font weights  */
 
 	--fw-extra-bold: 800;
@@ -24,10 +34,10 @@
 	--body-M-line-height: 28px;
 
 	--body-S-size: 16px;
-	--body-S-line-height: 28px;
+	--body-S-line-height: 26px;
 
 	/* text colors */
-	--text-normal-color: #83869a;
+	--text-paragraph-color: #83869a;
 	--text-darker-color: #13183f;
 	--text-pink-color: #f74780;
 	--text-white-color: #ffffff;
@@ -62,7 +72,6 @@ html:focus-within {
 body {
 	font-family: "Plus Jakarta Sans", sans-serif;
 	font-style: normal;
-
 	color: #13183f;
 	/* min-height: 100vh; */
 	background-image: var(--bg-white);
@@ -70,11 +79,54 @@ body {
 	overflow-x: hidden;
 }
 
+/*
+=====================================
+===== START COURSE SECTION AREA =====
+=====================================
+*/
+
 .courses-area {
 	width: 100%;
 	background-image: var(--bg-body-gradient);
 	padding: 0 165px 140px 165px;
 }
+
+/* course-area padding changes to //padding: 0 40px 86px 40px;// @tablet and //padding: 0 16px 80px 16px;// @mobile */
+
+/*
+===================================
+===== END COURSE SECTION AREA =====
+===================================
+*/
+
+/*
+===============================
+===== START CHECKOUT CARD =====
+===============================
+*/
+
+/* setting medium heading properties */
+.heading-medium {
+	font-size: var(--heading-M-size);
+	font-weight: var(--fw-extra-bold);
+	line-height: var(--heading-M-line-height);
+}
+
+/* building checkout card */
+#checkout-card {
+	width: 100%;
+	height: 100%;
+	color: var(--text-white-color);
+	background-image: var(--bg-gradient-main);
+	padding: 64px 32px;
+	border-radius: 10px;
+}
+
+/*
+=============================
+===== END CHECKOUT CARD =====
+=============================
+*/
 
 .courses-area > .courses {
 	/* max-width: 1110px; */
@@ -109,23 +161,23 @@ body {
 }
 
 .card > .card-body > .card-title {
-	font-size: 24px;
-	font-weight: 800;
-	line-height: 30px;
+	font-size: var(--fs-title);
+	font-weight: var(--fw-extra-bold);
+	line-height: var(--lh-title);
 	margin-bottom: 24px;
 }
 
 .card > .card-body > .card-paragraph {
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 28px;
-	color: var(--text-normal-color);
-	margin-bottom: 24px;
+	font-size: var(--body-M-size);
+	font-weight: var(--fs-medium-bold);
+	line-height: var(--body-M-line-height);
+	color: var(--text-paragraph-color);
+	margin-bottom: 52px;
 }
 
 .card > .card-body > .card-link {
-	/* position: absolute;
-    bottom: 40px; */
+	position: absolute;
+	bottom: 40px;
 	color: var(--text-pink-color);
 	font-size: 18px;
 	font-weight: 700;
@@ -133,28 +185,10 @@ body {
 	cursor: pointer;
 }
 
-
-
 .card > .card-body > .card-link:hover,
 .card > .card-body > .card-link:active {
 	color: var(--text-pink-dim-color);
 }
-
-#checkout-card {
-	width: 100%;
-	height: 100%;
-	color: var(--text-white-color);
-	background-image: var(--bg-gradient-main);
-	padding: 64px 32px;
-	border-radius: 10px;
-}
-
-#checkout-card > h2 {
-	font-size: 32px;
-	font-weight: 800;
-	line-height: var(--heading-M-line-height);
-}
-
 
 .footer-area {
 	width: 100%;
@@ -165,9 +199,9 @@ body {
 	align-items: center;
 }
 
-#footer-logo{
-    width: 111px;
-    height: 27px;
+#footer-logo {
+	width: 111px;
+	height: 27px;
 }
 
 .btn {
@@ -177,8 +211,8 @@ body {
 	line-height: 56px;
 	color: var(--text-white-color);
 	text-align: center;
-    font-size: 16px;
-    font-weight: 700;
+	font-size: 16px;
+	font-weight: 700;
 }
 
 #get-started-btn-footer {
@@ -186,6 +220,21 @@ body {
 }
 
 @media (max-width: 1200px) {
+	:root {
+
+        /* checkout heading props changes to */
+		--heading-M-size: 24px;
+		--heading-M-line-height: 32px;
+
+        /*  paragraph props changes to */
+		--body-M-size: var(--body-S-size);
+		--body-M-line-height: var(--body-S-line-height);
+
+		/* title props changes to */
+		--fs-title: var(--title-mobile-size);
+		--lh-title: var(--title-mobile-line-height);
+	}
+
 	.courses-area {
 		padding: 0 40px 86px 40px;
 	}
@@ -199,6 +248,12 @@ body {
 	}
 }
 
+/*
+=================================
+=====  Tablet viewport  =====
+=================================
+*/
+
 @media (max-width: 768px) {
 	.courses-area {
 		padding: 0 40px 86px 40px;
@@ -207,16 +262,16 @@ body {
 		gap: 32px 11px;
 	}
 
-    #footer-logo{
-    width: 90px;
-    height: 35px;
-}
+	#footer-logo {
+		width: 90px;
+		height: 35px;
+	}
 
-    #get-started-btn-footer {
-	width: 140px;
-	height: 48px;
-	line-height: 48px;
-}
+	#get-started-btn-footer {
+		width: 140px;
+		height: 48px;
+		line-height: 48px;
+	}
 }
 
 @media (max-width: 480px) {
