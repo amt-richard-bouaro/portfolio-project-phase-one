@@ -23,6 +23,10 @@
 	--fs-title: var(--title-desktop-size);
 	--lh-title: var(--title-desktop-line-height);
 
+	/* main header default props */
+	--fs-header: var(--heading-XL-size);
+	--lh-header: var(--heading-XL-line-height);
+
 	/* font weights  */
 
 	--fw-extra-bold: 800;
@@ -53,8 +57,6 @@
 	--bg-body-gradient: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
 }
 
-/* waa */
-
 *,
 *::after,
 *::before {
@@ -75,12 +77,12 @@ body {
 	font-family: "Plus Jakarta Sans", sans-serif;
 	font-style: normal;
 	color: #13183f;
-	/* min-height: 100vh; */
 	background-image: var(--bg-white);
 	max-width: 100%;
 	overflow-x: hidden;
 }
 
+/* General button style */
 .btn {
 	display: block;
 	width: 167px;
@@ -92,58 +94,67 @@ body {
 	font-weight: 700;
 }
 
+/* button hover effect */
 .btn:hover,
 .btn:active {
 	opacity: 0.6;
 }
 
+/* Header container */
 #header-top {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	/* background-color: #13183f;  */
 	margin: 24px 165px;
 	position: relative;
 }
 
+/* Header "Get Started" button */
 .get-started-btn-top {
-	/* position: absolute; */
 	background-color: var(--bg-darker);
 	color: var(--text-white-color);
 }
 
+/* Page logo */
 #top-logo {
 	width: 114px;
 	/* height: 45px; */
 }
 
+/* Hero section container */
 .hero-area {
 	display: flex;
 	overflow-x: hidden;
-	/* background-color: green; */
 	margin-top: -105px;
 	padding-left: 165px;
 }
 
+/* Hero section message part */
 .message-container {
-	/* background-color: #ff6f48; */
 	min-width: 50%;
 	padding-top: 252px;
 }
 
+/* Actual message wrapper */
 .message-content-area {
 	max-width: 560px;
 }
 
+/* Main header "Maximize skill..." */
 .message-content-area h1 {
-	font-size: var(--heading-XL-size);
+	display: block;
+	max-width: 510px;
+	font-size: var(--fs-header);
 	font-weight: var(--fw-extra-bold);
-	line-height: var(--heading-XL-line-height);
+	line-height: var(--lh-header);
 	margin-bottom: 30px;
 }
 
+/* Main header paragraph */
 .message-content-area p {
+	display: block;
+	max-width: 457px;
 	font-size: var(--body-M-size);
 	font-weight: var(--fw-medium-bold);
 	line-height: var(--body-M-line-height);
@@ -151,30 +162,27 @@ body {
 	color: var(--text-paragraph-color);
 }
 
+/* Message area button */
 .get-started-btn-middle {
 	background-image: var(--bg-gradient-main);
 	color: var(--text-white-color);
 }
 
+/* Hero image part */
 .hero-banner {
 	max-width: 100%;
 	margin-top: -146px;
 	width: 991px;
 	height: 936px;
-	/* z-index: 100; */
 	display: none;
 }
 
+/* Desktop size banner (image) */
 .desktop-banner {
 	display: block;
 }
 
-/*
-=====================================
-===== START COURSE SECTION AREA =====
-=====================================
-*/
-
+/* Courses section */
 .courses-area {
 	width: 100%;
 	background-image: var(--bg-body-gradient);
@@ -182,18 +190,6 @@ body {
 }
 
 /* course-area padding changes to //padding: 0 40px 86px 40px;// @tablet and //padding: 0 16px 80px 16px;// @mobile */
-
-/*
-===================================
-===== END COURSE SECTION AREA =====
-===================================
-*/
-
-/*
-===============================
-===== START CHECKOUT CARD =====
-===============================
-*/
 
 /* setting medium heading properties */
 .heading-medium {
@@ -212,14 +208,8 @@ body {
 	border-radius: 10px;
 }
 
-/*
-=============================
-===== END CHECKOUT CARD =====
-=============================
-*/
-
+/* courses wrapper */
 .courses-area > .courses {
-	/* max-width: 1110px; */
 	width: 100%;
 	margin: auto;
 	margin-top: 20px;
@@ -243,6 +233,7 @@ body {
 	position: relative;
 }
 
+/* Card overlapping image style */
 .course-card .card > .course-image {
 	width: 56px;
 	height: 56px;
@@ -251,6 +242,7 @@ body {
 	top: -24px;
 }
 
+/* Card title style */
 .card > .card-body > .card-title {
 	font-size: var(--fs-title);
 	font-weight: var(--fw-extra-bold);
@@ -258,6 +250,7 @@ body {
 	margin-bottom: 24px;
 }
 
+/* Card paragraph style */
 .card > .card-body > .card-paragraph {
 	font-size: var(--body-M-size);
 	font-weight: var(--fw-medium-bold);
@@ -266,6 +259,7 @@ body {
 	margin-bottom: 52px;
 }
 
+/* Card link style */
 .card > .card-body > .card-link {
 	position: absolute;
 	bottom: 40px;
@@ -276,11 +270,13 @@ body {
 	cursor: pointer;
 }
 
+/* Card link hover/active effect */
 .card > .card-body > .card-link:hover,
 .card > .card-body > .card-link:active {
 	color: var(--text-pink-dim-color);
 }
 
+/* Footer container */
 .footer-area {
 	width: 100%;
 	background-color: var(--bg-darker);
@@ -290,17 +286,25 @@ body {
 	align-items: center;
 }
 
+/* logo at the footer area */
 #footer-logo {
 	width: 111px;
 	height: 27px;
 }
 
+/* Footer area button */
 #get-started-btn-footer {
 	background-image: var(--bg-gradient-support);
 	color: var(--text-white-color);
 }
 
-@media (max-width: 1200px) {
+/*
+===================================================
+===== Tablet viewport - landscape orientation =====
+===================================================
+*/
+
+@media (max-width: 1024px) {
 	:root {
 		/* checkout heading props changes to */
 		--heading-M-size: 24px;
@@ -313,7 +317,12 @@ body {
 		/* title props changes to */
 		--fs-title: var(--title-mobile-size);
 		--lh-title: var(--title-mobile-line-height);
+
+		/* main header props changes to */
+		--fs-header: var(--heading-L-size);
+		--lh-header: var(--heading-L-line-height);
 	}
+
 	#header-top {
 		margin: 24px 40px;
 	}
@@ -322,8 +331,24 @@ body {
 		width: 89px;
 		/* height: 45px; */
 	}
+
 	.hero-area {
 		padding-left: 40px;
+	}
+
+	.hero-banner {
+		max-width: 100%;
+		margin-top: -72px;
+		width: 840px;
+		height: 770px;
+	}
+
+	.tablet-banner {
+		display: block;
+	}
+	.mobile-banner,
+	.desktop-banner {
+		display: none;
 	}
 
 	.btn {
@@ -376,15 +401,7 @@ body {
 	.message-container {
 		padding-top: 140px;
 	}
-	.message-content-area {
-		/* width: 398px; */
-	}
 
-	.message-content-area h1 {
-		font-weight: 800;
-		font-size: 40px;
-		line-height: 50px;
-	}
 	.courses-area {
 		padding: 0 40px 86px 40px;
 	}
@@ -403,6 +420,12 @@ body {
 		line-height: 48px;
 	}
 }
+
+/*
+=================================
+===== Mobile phone viewport =====
+=================================
+*/
 
 @media (max-width: 480px) {
 	#header-top {
