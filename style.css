@@ -95,9 +95,9 @@ body {
 }
 
 /* button hover effect */
-.btn:hover,
-.btn:active {
-	opacity: 0.6;
+
+.btn:hover{
+	opacity: 0.5;
 }
 
 /* Header container */
@@ -271,8 +271,7 @@ body {
 }
 
 /* Card link hover/active effect */
-.card > .card-body > .card-link:hover,
-.card > .card-body > .card-link:active {
+.card > .card-body > .card-link:hover{
 	color: var(--text-pink-dim-color);
 }
 
